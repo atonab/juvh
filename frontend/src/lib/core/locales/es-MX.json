@@ -1,0 +1,24 @@
+{
+    "_meta": {
+        "code": "es-MX",
+        "base_lang": "es",
+        "name": "Español (MX)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "ecosystemTitle": "JUVH",
+        "ecosystemSubtitle": "Selecciona una aplicación del entorno modular.",
+        "openAppsMenu": "Abrir menú de aplicaciones",
+        "uiLanguageLabel": "Idioma de interfaz",
+        "toggleThemeLabel": "Cambiar tema",
+        "appsMenuNavLabel": "Aplicaciones",
+        "statusActive": "Activo",
+        "statusPlanned": "Próximamente",
+        "apps": {
+            "review-template": {
+                "name": "Plantilla de Reseña",
+                "description": "Generador estructurado de reseñas Unicode con cálculo normalizado."
+            }
+        }
+    }
+}

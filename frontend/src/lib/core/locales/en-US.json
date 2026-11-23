@@ -1,0 +1,24 @@
+{
+    "_meta": {
+        "code": "en-US",
+        "base_lang": "en",
+        "name": "English (US)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "ecosystemTitle": "JUVH",
+        "ecosystemSubtitle": "Select an application from the modular environment.",
+        "openAppsMenu": "Open applications menu",
+        "uiLanguageLabel": "Interface language",
+        "toggleThemeLabel": "Toggle theme",
+        "appsMenuNavLabel": "Applications",
+        "statusActive": "Active",
+        "statusPlanned": "Coming soon",
+        "apps": {
+            "review-template": {
+                "name": "Review Template",
+                "description": "Structured Unicode review generator with normalized scoring."
+            }
+        }
+    }
+}
