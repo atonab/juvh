@@ -24,12 +24,12 @@ npm-debug.log*
 pnpm-debug.log*
 
 # --- Backend (Python / FastAPI) ---
-backend/__pycache__/
-backend/**/__pycache__/
+core/__pycache__/
+core/**/__pycache__/
 *.py[cod]
 *$py.class
-backend/.venv/
-backend/venv/
+core/.venv/
+core/venv/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
