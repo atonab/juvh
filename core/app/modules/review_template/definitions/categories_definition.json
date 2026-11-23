@@ -1,0 +1,83 @@
+{
+    "categories": [
+        {
+            "id": "graphics",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 7
+        },
+        {
+            "id": "gameplay",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 6
+        },
+        {
+            "id": "audio",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 6
+        },
+        {
+            "id": "grind",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 6
+        },
+        {
+            "id": "story",
+            "group": "scorable",
+            "type": "radio",
+            "order": "worst_first",
+            "option_count": 6
+        },
+        {
+            "id": "price",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 6
+        },
+        {
+            "id": "bugs",
+            "group": "scorable",
+            "type": "radio",
+            "order": "best_first",
+            "option_count": 5
+        },
+        {
+            "id": "audience",
+            "group": "specs",
+            "type": "check",
+            "option_count": 4
+        },
+        {
+            "id": "pc_requirements",
+            "group": "specs",
+            "type": "radio",
+            "option_count": 6
+        },
+        {
+            "id": "game_size",
+            "group": "specs",
+            "type": "radio",
+            "option_count": 7
+        },
+        {
+            "id": "difficulty",
+            "group": "specs",
+            "type": "radio",
+            "option_count": 6
+        },
+        {
+            "id": "duration",
+            "group": "specs",
+            "type": "radio",
+            "option_count": 5
+        }
+    ]
+}

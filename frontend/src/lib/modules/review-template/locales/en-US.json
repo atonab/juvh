@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "code": "en-US",
+        "base_lang": "en",
+        "name": "English (US)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "styleLabel": "Style:",
+        "outputLangLabel": "Template language:",
+        "includeSignatureLabel": "Include JUVH link",
+        "resetDraftButton": "Clear draft",
+        "gameTitleLabel": "Game or software title",
+        "gameTitlePlaceholder": "e.g. Six Days in Fallujah",
+        "commentLabel": "Review / Free comment (Optional)",
+        "commentPlaceholder": "Write your overall thoughts; it will be framed automatically with the template style...",
+        "loadingCategories": "Loading category definitions from core...",
+        "scorableSectionTitle": "Scorable Categories",
+        "scorableSectionHint": "Averaged into final rating",
+        "specsSectionTitle": "Technical & Profile Specs",
+        "specsSectionHint": "Informational (do not affect average)",
+        "typeMultiple": "Multiple",
+        "typeSingle": "Single",
+        "previewTitle": "Live Preview",
+        "copyButton": "Copy text",
+        "copiedButton": "Copied",
+        "generatingPreview": "Generating template...",
+        "emptyPreviewHint": "Select options to preview your review."
+    }
+}

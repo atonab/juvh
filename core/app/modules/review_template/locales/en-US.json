@@ -1,0 +1,169 @@
+{
+    "_meta": {
+        "code": "en-US",
+        "base_lang": "en",
+        "name": "English (US)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "ui": {
+            "default_title": "EVALUATION SHEET",
+            "evaluated_section": "CATEGORY BREAKDOWN",
+            "specs_section": "TECHNICAL & PROFILE SPECS",
+            "final_rating": "FINAL RATING",
+            "based_on": "Based on {evaluated}/{total} categories",
+            "manual_rating": "Custom rating",
+            "signature": "⚡ Built with JUVH • {url}"
+        },
+        "categories": {
+            "graphics": {
+                "label": "Graphics",
+                "options": [
+                    "You forget what reality is",
+                    "Beautiful",
+                    "Good",
+                    "Decent",
+                    "Bad",
+                    "Don't look too long at it",
+                    "PONG looks better"
+                ]
+            },
+            "gameplay": {
+                "label": "Gameplay",
+                "options": [
+                    "Excellent",
+                    "Very good",
+                    "Good",
+                    "Mehh",
+                    "Watch paint dry instead",
+                    "Don't even touch it"
+                ]
+            },
+            "audio": {
+                "label": "Audio",
+                "options": [
+                    "Eargasm",
+                    "Very good",
+                    "Good",
+                    "Not too bad",
+                    "Bad",
+                    "I'm deaf now"
+                ]
+            },
+            "grind": {
+                "label": "Grind",
+                "options": [
+                    "Nothing to grind",
+                    "Only if you care about leaderboards/ranks",
+                    "Not needed to progress",
+                    "You need to grind",
+                    "Too much grind",
+                    "You won't see the outside world again"
+                ]
+            },
+            "story": {
+                "label": "Story",
+                "options": [
+                    "No story",
+                    "Some lore",
+                    "Average story",
+                    "Good story",
+                    "Beautiful",
+                    "Literature worthy"
+                ]
+            },
+            "price": {
+                "label": "Price",
+                "options": [
+                    "It's free!",
+                    "Worth the price",
+                    "If it's on sale",
+                    "If you have some spare money left",
+                    "Not recommended",
+                    "You could also just burn your money"
+                ]
+            },
+            "bugs": {
+                "label": "Bugs",
+                "options": [
+                    "Never heard of",
+                    "Minor bugs",
+                    "Can get annoying",
+                    "Bugisoft",
+                    "The game itself is a big terrarium for bugs"
+                ]
+            },
+            "audience": {
+                "label": "Audience",
+                "options": [
+                    "Kids",
+                    "Teens",
+                    "Adults",
+                    "Seniors"
+                ]
+            },
+            "pc_requirements": {
+                "label": "PC Requirements",
+                "options": [
+                    "Check if you can run Paint",
+                    "Potato",
+                    "Decent",
+                    "Fast",
+                    "Rich boi",
+                    "Ask NASA if they have a spare computer"
+                ]
+            },
+            "game_size": {
+                "label": "Game Size",
+                "options": [
+                    "Floppy Disk",
+                    "CD/DVD",
+                    "Decent",
+                    "Big",
+                    "Will consume 15% of your 1TB",
+                    "You will need an entire hard drive",
+                    "Buy a black hole"
+                ]
+            },
+            "difficulty": {
+                "label": "Difficulty",
+                "options": [
+                    "Just press 'W'",
+                    "Easy",
+                    "Easy to learn / Hard to master",
+                    "Significant brain usage",
+                    "Difficult",
+                    "Latin America Mode"
+                ]
+            },
+            "duration": {
+                "label": "Duration",
+                "options": [
+                    "Long enough for a cup of coffee",
+                    "Short",
+                    "Average",
+                    "Long",
+                    "To infinity and beyond"
+                ]
+            }
+        },
+        "templates": {
+            "minimal": {
+                "label": "Technical Blocks (Squares)",
+                "description": "Clean layout with solid square progress bars."
+            },
+            "circles": {
+                "label": "Minimalist Orbs (Circles)",
+                "description": "Smooth circular indicators across categories and summary."
+            },
+            "stars": {
+                "label": "Classic Stars",
+                "description": "Star meters per category and final star summary."
+            },
+            "radar": {
+                "label": "Geometric Radar (Diamonds)",
+                "description": "Tactical layout with diamond meters per category."
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+{
+    "_meta": {
+        "code": "es-MX",
+        "base_lang": "es",
+        "name": "Español (México)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "ui": {
+            "default_title": "FICHA DE EVALUACIÓN",
+            "evaluated_section": "EVALUACIÓN POR APARTADOS",
+            "specs_section": "FICHA TÉCNICA",
+            "final_rating": "CALIFICACIÓN FINAL",
+            "based_on": "Basado en {evaluated}/{total} apartados",
+            "manual_rating": "Calificación personalizada",
+            "signature": "⚡ Creado con JUVH • {url}"
+        },
+        "categories": {
+            "graphics": {
+                "label": "Gráficos",
+                "options": [
+                    "Olvidas lo que es la realidad",
+                    "Hermoso",
+                    "Bueno",
+                    "Decente",
+                    "Malo",
+                    "No lo mires por mucho tiempo",
+                    "Se ve mejor el PONG"
+                ]
+            },
+            "gameplay": {
+                "label": "Jugabilidad",
+                "options": [
+                    "Excelente",
+                    "Muy buena",
+                    "Buena",
+                    "Mehh",
+                    "Ve como seca la pintura",
+                    "Ni lo toques"
+                ]
+            },
+            "audio": {
+                "label": "Audio",
+                "options": [
+                    "Orgasmo auditivo",
+                    "Muy bueno",
+                    "Bueno",
+                    "No tan mal",
+                    "Malo",
+                    "Ahora estoy sordo"
+                ]
+            },
+            "grind": {
+                "label": "Grind",
+                "options": [
+                    "Nada de grindeo",
+                    "Solo si te importan las clasificaciones/ranks",
+                    "No es necesario para progresar",
+                    "Necesitas grindear",
+                    "Demasiado grindeo",
+                    "No volverás a ver el exterior"
+                ]
+            },
+            "story": {
+                "label": "Historia",
+                "options": [
+                    "Nada de historia",
+                    "Algo de historia",
+                    "Historia promedio",
+                    "Buena historia",
+                    "Hermoso",
+                    "Digna de la literatura"
+                ]
+            },
+            "price": {
+                "label": "Precio",
+                "options": [
+                    "¡Gratis!",
+                    "Vale el precio",
+                    "Solo si está en oferta",
+                    "Si te sobra dinero",
+                    "Nada recomendado",
+                    "Mejor quema tu dinero"
+                ]
+            },
+            "bugs": {
+                "label": "Errores",
+                "options": [
+                    "Nunca los he visto",
+                    "Algúnos tirones",
+                    "Pueden ser molestos",
+                    "Bugisoft",
+                    "El juego en sí es un error"
+                ]
+            },
+            "audience": {
+                "label": "Audiencia",
+                "options": [
+                    "Niños",
+                    "Adolescentes",
+                    "Adultos",
+                    "Ancianos"
+                ]
+            },
+            "pc_requirements": {
+                "label": "Requerimientos PC",
+                "options": [
+                    "Con que corras Paint",
+                    "Patata",
+                    "Decente",
+                    "Rápida",
+                    "Princesa de Polanco",
+                    "Pide prestada una PC a la NASA"
+                ]
+            },
+            "game_size": {
+                "label": "Tamaño",
+                "options": [
+                    "Floppy Disk",
+                    "CD/DVD",
+                    "Decente",
+                    "Grande",
+                    "Va a consumir 15% de 1TB",
+                    "Necesitarás un disco duro entero",
+                    "Compra un hoyo negro"
+                ]
+            },
+            "difficulty": {
+                "label": "Dificultad",
+                "options": [
+                    "Solo es presionar 'W'",
+                    "Fácil",
+                    "Fácil de aprender / difícil de dominar",
+                    "Usarás el cerebro",
+                    "Difícil",
+                    "Modo Latinoamérica"
+                ]
+            },
+            "duration": {
+                "label": "Duración",
+                "options": [
+                    "Lo suficiente hasta terminar tu café",
+                    "Corto",
+                    "Promedio",
+                    "Largo",
+                    "No tiene fin"
+                ]
+            }
+        },
+        "templates": {
+            "minimal": {
+                "label": "Bloques Técnicos (Cuadritos)",
+                "description": "Diseño limpio con barras de cuadros sólidos."
+            },
+            "circles": {
+                "label": "Orbes Minimalistas (Círculos)",
+                "description": "Indicadores circulares suaves en apartados y cierre."
+            },
+            "stars": {
+                "label": "Estrellas Clásicas",
+                "description": "Estrellas por apartado y cierre con estrellas."
+            },
+            "radar": {
+                "label": "Radar Geométrico (Diamantes)",
+                "description": "Estilo táctico con diamantes en cada categoría."
+            }
+        }
+    }
+}

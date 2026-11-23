@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "code": "es-MX",
+        "base_lang": "es",
+        "name": "Español (MX)",
+        "direction": "ltr"
+    },
+    "strings": {
+        "styleLabel": "Estilo:",
+        "outputLangLabel": "Idioma plantilla:",
+        "includeSignatureLabel": "Incluir enlace JUVH",
+        "resetDraftButton": "Limpiar borrador",
+        "gameTitleLabel": "Título del juego o software",
+        "gameTitlePlaceholder": "Ej. Six Days in Fallujah",
+        "commentLabel": "Reseña / Comentario libre (Opcional)",
+        "commentPlaceholder": "Escribe tu opinión general; se enmarcará automáticamente con el estilo de la plantilla...",
+        "loadingCategories": "Cargando definición de apartados desde el núcleo...",
+        "scorableSectionTitle": "Apartados Evaluables",
+        "scorableSectionHint": "Promedian la calificación final",
+        "specsSectionTitle": "Ficha Técnica y Perfil",
+        "specsSectionHint": "Informativos (no alteran el promedio)",
+        "typeMultiple": "Múltiple",
+        "typeSingle": "Única",
+        "previewTitle": "Vista Previa",
+        "copyButton": "Copiar texto",
+        "copiedButton": "Copiado",
+        "generatingPreview": "Generando plantilla...",
+        "emptyPreviewHint": "Selecciona apartados para previsualizar tu reseña."
+    }
+}
