@@ -1,4 +1,4 @@
-name: HEVIS CI
+name: JUVH CI
 
 on:
     push:

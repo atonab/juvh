@@ -12,11 +12,11 @@
 </script>
 
 <svelte:head>
-	<title>HEVIS — Herramientas Vitaminadas Para Steam</title>
+	<title>JUVH — Jugadores Vitaminados con Herramientas</title>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<ModeWatcher /> <!-- <-- 2. Agregas el componente aquí -->
+<ModeWatcher />
 
 {@render children()}
 
