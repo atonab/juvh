@@ -3,13 +3,15 @@ import http from 'node:http';
 import path from 'node:path';
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig, type Plugin } from 'vite';
+import type { Plugin } from 'vite';
+import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
 const isProd = process.env.NODE_ENV === 'production';
 const runtimeFile = path.resolve(process.cwd(), '../.runtime/core.json');
+const basePath = (isProd ? process.env.BASE_PATH || '/juvh' : '') as '' | `/${string}`;
 
 function readCoreEndpoint(): { host: string; port: number } | null {
 	if (process.env.CORE_URL) {
@@ -95,7 +97,7 @@ export default defineConfig({
 				fallback: 'index.html'
 			}),
 			paths: {
-				base: isProd ? process.env.BASE_PATH || '/juvh' : ''
+				base: basePath
 			}
 		}),
 		paraglideVitePlugin({
