@@ -15,9 +15,9 @@
 	}
 </script>
 
-<aside class="flex flex-col gap-3 lg:sticky lg:top-20">
-	<div class="flex items-center justify-between rounded-lg border bg-card px-4 py-3">
-		<div class="flex items-center gap-2">
+<aside class="flex w-full min-w-0 flex-col gap-3 lg:sticky lg:top-20">
+	<div class="flex flex-wrap items-center justify-between gap-2 rounded-lg border bg-card px-4 py-3">
+		<div class="flex min-w-0 flex-wrap items-center gap-2">
 			<span class="text-xs font-bold uppercase tracking-wider">
 				{reviewTemplateStore.ui.previewTitle}
 			</span>
@@ -33,7 +33,7 @@
 
 		<Button
 			size="sm"
-			class="h-8 text-xs"
+			class="h-8 shrink-0 text-xs"
 			disabled={!reviewTemplateStore.result?.rendered}
 			onclick={copyOutput}
 		>
@@ -53,7 +53,7 @@
 		</div>
 	{/if}
 
-	<div class="overflow-x-auto rounded-lg border bg-muted/40 p-4">
+	<div class="w-full min-w-0 overflow-x-auto rounded-lg border bg-muted/40 p-4">
 		{#if reviewTemplateStore.result?.rendered}
 			<pre class="font-mono text-xs leading-relaxed whitespace-pre text-foreground">{reviewTemplateStore.result.rendered}</pre>
 		{:else}

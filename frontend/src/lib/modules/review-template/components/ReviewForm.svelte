@@ -23,14 +23,15 @@
 	);
 </script>
 
-<div class="flex flex-col gap-6">
-	<section class="flex flex-col gap-4 rounded-lg border bg-card p-4">
-		<div class="flex flex-col gap-1.5">
+<div class="flex w-full min-w-0 flex-col gap-6">
+	<section class="flex min-w-0 flex-col gap-4 rounded-lg border bg-card p-4">
+		<div class="flex min-w-0 flex-col gap-1.5">
 			<Label for="game-title" class="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
 				{reviewTemplateStore.ui.gameTitleLabel}
 			</Label>
 			<Input
 				id="game-title"
+				class="w-full min-w-0"
 				placeholder={reviewTemplateStore.ui.gameTitlePlaceholder}
 				value={reviewTemplateStore.gameTitle}
 				oninput={(e) => {
@@ -40,13 +41,14 @@
 			/>
 		</div>
 
-		<div class="flex flex-col gap-1.5">
+		<div class="flex min-w-0 flex-col gap-1.5">
 			<Label for="review-comment" class="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
 				{reviewTemplateStore.ui.commentLabel}
 			</Label>
 			<Textarea
 				id="review-comment"
 				rows={3}
+				class="w-full min-w-0"
 				placeholder={reviewTemplateStore.ui.commentPlaceholder}
 				value={reviewTemplateStore.comment}
 				oninput={(e) => {
@@ -62,8 +64,8 @@
 			{reviewTemplateStore.ui.loadingCategories}
 		</div>
 	{:else if reviewTemplateStore.metadata}
-		<section class="flex flex-col gap-4 rounded-lg border bg-card p-4">
-			<div class="flex items-center justify-between border-b pb-2">
+		<section class="flex min-w-0 flex-col gap-4 rounded-lg border bg-card p-4">
+			<div class="flex flex-wrap items-center justify-between gap-1.5 border-b pb-2">
 				<h2 class="text-xs font-bold uppercase tracking-wider text-foreground">
 					{reviewTemplateStore.ui.scorableSectionTitle}
 				</h2>
@@ -72,14 +74,14 @@
 				</span>
 			</div>
 
-			<div class="grid gap-4 sm:grid-cols-2">
+			<div class="grid min-w-0 gap-4 sm:grid-cols-2">
 				{#each scorableCategories as category (category.id)}
 					{@const selected = reviewTemplateStore.selections[category.id] ?? []}
-					<div class="flex flex-col gap-2 rounded-md border bg-background/50 p-3">
-						<div class="flex items-center justify-between">
+					<div class="flex min-w-0 flex-col gap-2 rounded-md border bg-background/50 p-3">
+						<div class="flex items-center justify-between gap-2">
 							<span class="text-sm font-semibold">{category.label}</span>
 							{#if selected.length > 0}
-								<Badge variant="secondary" class="font-mono text-[10px]">
+								<Badge variant="secondary" class="shrink-0 font-mono text-[10px]">
 									#{selected.join(', ')}
 								</Badge>
 							{/if}
@@ -96,13 +98,13 @@
 											opt.index,
 											category.type
 										)}
-									class="flex items-center justify-between rounded px-2.5 py-1.5 text-left text-xs transition-colors {active
+									class="flex items-center justify-between gap-2 rounded px-2.5 py-1.5 text-left text-xs transition-colors {active
 										? 'bg-primary text-primary-foreground font-medium'
 										: 'hover:bg-muted text-foreground'}"
 								>
 									<span>{opt.label}</span>
 									{#if opt.rating !== null}
-										<span class="font-mono text-[10px] opacity-75">
+										<span class="shrink-0 font-mono text-[10px] opacity-75">
 											{opt.rating.toFixed(1)}
 										</span>
 									{/if}
@@ -114,8 +116,8 @@
 			</div>
 		</section>
 
-		<section class="flex flex-col gap-4 rounded-lg border bg-card p-4">
-			<div class="flex items-center justify-between border-b pb-2">
+		<section class="flex min-w-0 flex-col gap-4 rounded-lg border bg-card p-4">
+			<div class="flex flex-wrap items-center justify-between gap-1.5 border-b pb-2">
 				<h2 class="text-xs font-bold uppercase tracking-wider text-foreground">
 					{reviewTemplateStore.ui.specsSectionTitle}
 				</h2>
@@ -124,13 +126,13 @@
 				</span>
 			</div>
 
-			<div class="grid gap-4 sm:grid-cols-2">
+			<div class="grid min-w-0 gap-4 sm:grid-cols-2">
 				{#each specCategories as category (category.id)}
 					{@const selected = reviewTemplateStore.selections[category.id] ?? []}
-					<div class="flex flex-col gap-2 rounded-md border bg-background/50 p-3">
-						<div class="flex items-center justify-between">
+					<div class="flex min-w-0 flex-col gap-2 rounded-md border bg-background/50 p-3">
+						<div class="flex items-center justify-between gap-2">
 							<span class="text-sm font-semibold">{category.label}</span>
-							<span class="text-[10px] uppercase text-muted-foreground">
+							<span class="shrink-0 text-[10px] uppercase text-muted-foreground">
 								{category.type === 'check'
 									? reviewTemplateStore.ui.typeMultiple
 									: reviewTemplateStore.ui.typeSingle}
@@ -148,7 +150,7 @@
 											opt.index,
 											category.type
 										)}
-									class="flex items-center justify-between rounded px-2.5 py-1.5 text-left text-xs transition-colors {active
+									class="flex items-center justify-between gap-2 rounded px-2.5 py-1.5 text-left text-xs transition-colors {active
 										? 'bg-secondary text-secondary-foreground ring-1 ring-primary font-medium'
 										: 'hover:bg-muted text-foreground'}"
 								>
