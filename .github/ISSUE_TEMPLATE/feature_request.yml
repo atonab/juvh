@@ -1,0 +1,44 @@
+name: 💡 Sugerir nueva función o micro-app
+description: Propón una nueva herramienta, plantilla o mejora para el ecosistema JUVH.
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              ¡Gracias por ayudar a crecer **JUVH**! No necesitas saber programar para proponer una idea.
+    - type: textarea
+      id: problem
+      attributes:
+          label: ¿Qué necesitas o qué problema quieres resolver?
+          description: Cuéntanos en tus propias palabras qué te gustaría lograr.
+          placeholder: Ej. Me gustaría una micro-app para generar firmas de perfil o plantillas para otro tipo de reseñas...
+      validations:
+          required: true
+    - type: textarea
+      id: solution
+      attributes:
+          label: ¿Cómo te gustaría que funcionara?
+          placeholder: Describe brevemente qué opciones o resultado esperarías ver.
+      validations:
+          required: false
+    - type: input
+      id: output_format
+      attributes:
+          label: ¿Necesitas algún formato específico de salida?
+          description: Indica si necesitas que el resultado se genere o se exporte en algún formato especial (opcional).
+          placeholder: Ej. Texto plano Unicode, Markdown, JSON, CSV, imagen, PDF...
+      validations:
+          required: false
+    - type: dropdown
+      id: requires_api
+      attributes:
+          label: ¿Requiere conexión o soporte de API?
+          description: Selecciona si esta función necesita consultar servicios externos o procesarse desde el backend (FastAPI).
+          options:
+              - No
+              - Sí
+              - No estoy seguro
+          default: 0
+      validations:
+          required: true

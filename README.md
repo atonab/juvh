@@ -1,19 +1,21 @@
 <div align="center">
 
-# JUVH
-### Jugadores Vitaminados con Herramientas
+<img src="frontend/static/icon-dark.svg" width="41" alt="JUVH Logo">
+<br>
+<img src="frontend/static/logo-dark.svg" width="124" alt="JUVH Logo">
+<br>
 
-*Ecosistema de código abierto, moderno y modular de herramientas de alto rendimiento, sin relleno y 100% extensibles para jugadores multiplataforma.*
+</div>
 
-[![Live App](https://img.shields.io/badge/🌐_Abrir_App_en_Vivo-GitHub_Pages-2ea44f?style=for-the-badge)](https://atonab.github.io/juvh)
-[![API Docs](https://img.shields.io/badge/⚡_API_Core-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](#-arquitectura-desacoplada)
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-Serverless_Ready-009688?style=flat-square&logo=fastapi&logoColor=white)
-![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte_5-FF3E00?style=flat-square&logo=svelte&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Architecture](https://img.shields.io/badge/Arquitectura-Vertical_Modular-8A2BE2?style=flat-square)
-![License](https://img.shields.io/badge/Open_Source-MIT-blue?style=flat-square)
+[![CI](https://github.com/atonab/juvh/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/atonab/juvh/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/atonab/juvh?label=release&color=6b34db)](https://github.com/atonab/juvh/releases)
+[![License](https://img.shields.io/github/license/atonab/juvh?color=6b34db)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Serverless_Ready-009688?logo=fastapi&logoColor=white)
+![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte_5-FF3E00?logo=svelte&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
 
 </div>
 
@@ -21,70 +23,82 @@
 
 ## ¿Qué es JUVH?
 
-**JUVH** nace como un proyecto moderno, que adopta una filosofía: **Herramientas dotadas de logica robusta**, con esto **JUVH** busca ofrecer un conjunto de aplicaciones para jugadores que buscan generar contenido limpio (como reseñas estructuradas para Steam, GOG o Discord), automatizar flujos por terminal (`curl`) o usar una interfaz web ultrarrápida sin trackers ni bloatware.
-La meta es poder ofrecer este conjunto en un API para poder utilizarlo facilmente en una gran variedad de proyectos y/o utilizar la UI que se diseñó para la web.
+**JUVH** nace como un proyecto moderno, para entregar una serie de herramientas *gaming* dotadas de tecnología que las herramientas actuales Open Source no tienen contemplado, inspirado en las plantillas de steam para generar reseñas servidas por API.
+
+Este proyecto no está enfocado como tal para un despliegue local, ya que voy a buscar la manera para desplegar todos los servicios en la nube y que puedan ser consumidos de forma gratuita, sin embargo dejo una breve guía del despliegue local y la base de la arquitectura, junto con las necesidades para la contribución de desarrolladores y traductores.
+
+[![Live App](https://img.shields.io/badge/GITHUB%20PAGES-APP-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://atonab.github.io/juvh)
+[![API Docs](https://img.shields.io/badge/FASTAPI-API-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://juvh.vercel.app/docs)
 
 ---
 
-## Arquitectura Desacoplada
+## Plantilla de Reseñas Steam
 
-El proyecto está dividido en dos capas independientes diseñadas para operar a **costo $0** con rendimiento óptimo:
+> **Documentación del módulo:** [README](core/app/modules/review_template/README.md) · [Guía de Contribución](core/app/modules/review_template/CONTRIBUTING.md)
 
-```text
-juvh/
-├── core/                         # Motor lógico y API REST (Python + FastAPI)
-│   ├── run.py                    # Arranque inteligente con asignación dinámica de puertos
-│   └── app/
-│       ├── api/                  # Enrutador centralizado (/api/v1)
-│       └── modules/              # Módulos verticales autónomos
-│           └── review_template/  # Generador Unicode de reseñas (README + CONTRIBUTING propios)
-│
-├── frontend/                     # Interfaz estática Mobile-First (Svelte 5 + Tailwind v4)
-│   └── src/lib/modules/          # Espejo modular del backend con persistencia localStorage
-│
-├── CONTRIBUTING.md               # Reglas globales de arquitectura y desacoplamiento
-└── README.md                     # Documentación principal
-```
+### Ejemplo de uso vía API (`cURL`)
 
-| Capa | Tecnología | Despliegue | Rol en el Ecosistema |
-| :--- | :--- | :--- | :--- |
-| **Frontend** | SvelteKit 5 + shadcn-svelte | **GitHub Pages** | Interfaz estática instantánea, offline-first y Mobile-First. |
-| **Core API** | Python + FastAPI | **Vercel (Serverless)** | Cálculo matemático, autodescubrimiento y renderizado Unicode. |
-
----
-
-## Módulos Disponibles
-
-| Módulo | Descripción | Documentación | Guía de Contribución |
-| :--- | :--- | :--- | :--- |
-| **`review_template`** | Generador de reseñas Unicode con cálculo matemático normalizado ($1\dots N \rightarrow 5.0$), temas visuales intercambiables e i18n dinámico. | [README](core/app/modules/review_template/README.md) | [CONTRIBUTING](core/app/modules/review_template/CONTRIBUTING.md) |
-
----
-
-## Inicio Rápido en Local
-
-### 1. Levantar el Núcleo (`core`)
-El servidor busca automáticamente un puerto libre del sistema operativo y lo publica en `.runtime/core.json`:
+Petición directa a `POST /api/v1/review-template/render` (devuelve texto plano listo para copiar; usa `/render/json` si prefieres la respuesta estructurada con el desglose del promedio):
 
 ```bash
-cd core
-python -m venv .venv
-source .venv/bin/activate  # En Fish: source .venv/bin/activate.fish
-pip install -r requirements.txt
-python run.py
+curl -X POST "https://juvh.vercel.app/api/v1/review-template/render" \
+  -H "accept: text/plain" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "template": "circles",
+    "lang": "es-MX",
+    "game_title": "Six Days in Fallujah",
+    "comment": "Un shooter táctico brutal donde la comunicación con tu escuadra lo es todo. El sonido te pone los pelos de punta.",
+    "selections": {
+      "graphics": [2],
+      "gameplay": [1],
+      "audio": [1],
+      "grind": [1],
+      "story": [4],
+      "price": [2],
+      "bugs": [2],
+      "audience": [2, 3],
+      "pc_requirements": [4],
+      "game_size": [4],
+      "difficulty": [5],
+      "duration": [3]
+    },
+    "manual_rating": null
+  }'
 ```
 
-### 2. Levantar el Frontend (`frontend`)
-Vite detecta automáticamente el puerto activo en `.runtime/core.json` sin configuraciones manuales:
+### ¿Qué significa cada dato que envías?
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- **`template`**: El estilo de iconos que quieres que lleve tu reseña (`"circles"`, `"squares"`, `"stars"` o `"diamonds"`).
+- **`lang`**: El idioma en el que saldrá el texto de la plantilla (`"es-MX"` para español, `"en-US"` para inglés, etc.).
+- **`game_title`**: El nombre del juego que vas a reseñar (aparece hasta arriba como título).
+- **`comment`**: Tu opinión personal o veredicto final escrito con tus propias palabras.
+- **`selections`**: Aquí eliges la opción que mejor describe cada apartado del juego usando el número de la lista (por ejemplo, `[1]` es la primera opción, `[2]` la segunda, y así sucesivamente). Se divide en dos grupos:
+  - **Apartados que suman calificación:** Son los puntos que sí definen qué tan bueno es el juego (`graphics`, `gameplay`, `audio`, `grind`, `story`, `price`, `bugs`). La API toma tus elecciones aquí para calcular automáticamente las estrellas finales.
+  - **Apartados informativos (ficha técnica):** Sirven para darle contexto a otros jugadores sin afectar la calificación final (`audience`, `pc_requirements`, `game_size`, `difficulty`, `duration`). Por ejemplo, que un juego sea muy pesado o difícil no le resta estrellas, solo avisa qué esperar. *(En `audience` puedes marcar varias opciones a la vez, como `[2, 3]`)*.
+- **`manual_rating`**: Si prefieres poner tú mismo la calificación final del `0.0` al `5.0`, escríbela aquí. Si lo dejas en `null`, la herramienta saca el promedio por ti automáticamente.
 
 ---
+
+## Sugerencias y Soporte
+
+¿Tienes una idea para una nueva micro-app, quieres pedir una plantilla o necesitas ayuda? No necesitas saber programar:
+
+- **[Proponer una función o pedir ayuda](https://github.com/atonab/juvh/issues/new/choose)** mediante nuestros formularios guiados.
+- **[Unirte a las discusiones](https://github.com/atonab/juvh/discussions)** para compartir ideas con la comunidad.
 
 ## Contribuciones
 
-JUVH opera bajo **desacoplamiento estricto por módulo**. Antes de abrir un Pull Request, revisa la [Guía Global de Contribución](CONTRIBUTING.md) y la guía específica dentro de la carpeta del módulo que deseas extender.
+Antes de abrir un Pull Request, revisa estos recursos:
+
+- [Guía de Instalación](INSTALL.md) — Configuración del entorno local (`core` y `frontend`).
+- [Guía Global de Contribución](CONTRIBUTING.md) — Reglas generales del proyecto y de cada módulo.
+- [Licencia Apache 2.0](LICENSE) — Términos de uso, distribución y atribución.
+
+<div align="center">
+
+# JUVH
+
+Creado por Atonab -  Apache-2.0 licence &copy; 2026
+
+</div>

@@ -1,0 +1,12 @@
+name: 🙋 Pedir ayuda o hacer una consulta
+description: ¿Tienes dudas sobre cómo usar alguna herramienta o encontraste algo confuso?
+title: "[Ayuda]: "
+labels: ["question"]
+body:
+    - type: textarea
+      id: question
+      attributes:
+          label: ¿En qué podemos ayudarte?
+          placeholder: Explica tu duda o qué estabas intentando hacer en la aplicación.
+      validations:
+          required: true
