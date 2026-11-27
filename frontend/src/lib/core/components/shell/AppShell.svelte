@@ -3,6 +3,7 @@
 	import AppHeader from './AppHeader.svelte';
 	import GlobalNavDrawer from './GlobalNavDrawer.svelte';
 	import AppContextBar from './AppContextBar.svelte';
+	import AppFooter from './AppFooter.svelte';
 
 	interface Props {
 		contextControls?: Snippet;
@@ -20,4 +21,6 @@
 	<main class="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
 		{@render children()}
 	</main>
+
+	<AppFooter />
 </div>

@@ -19,6 +19,13 @@
                 "name": "Review Template",
                 "description": "Structured Unicode review generator with normalized scoring."
             }
+        },
+        "footer": {
+            "openSourceBadge": "Open Source · Apache-2.0 License",
+            "starCta": "Star on GitHub",
+            "sourceCode": "Source Code",
+            "apiDocs": "API Docs",
+            "suggestIdea": "Suggest idea or issue"
         }
     }
 }

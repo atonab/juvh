@@ -8,6 +8,13 @@ export interface ShellDictionary {
 	statusActive: string;
 	statusPlanned: string;
 	apps: Record<string, { name: string; description: string }>;
+	footer: {
+		openSourceBadge: string;
+		starCta: string;
+		sourceCode: string;
+		apiDocs: string;
+		suggestIdea: string;
+	};
 }
 
 interface LocaleFileSchema {

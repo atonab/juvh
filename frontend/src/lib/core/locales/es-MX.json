@@ -19,6 +19,13 @@
                 "name": "Plantilla de Reseña",
                 "description": "Generador estructurado de reseñas Unicode con cálculo normalizado."
             }
+        },
+        "footer": {
+            "openSourceBadge": "Código Abierto · Licencia Apache-2.0",
+            "starCta": "Apoya en GitHub",
+            "sourceCode": "Código Fuente",
+            "apiDocs": "API Docs",
+            "suggestIdea": "Sugerir idea o reporte"
         }
     }
 }
