@@ -36,9 +36,9 @@ body:
           label: ¿Requiere conexión o soporte de API?
           description: Selecciona si esta función necesita consultar servicios externos o procesarse desde el backend (FastAPI).
           options:
-              - No
-              - Sí
-              - No estoy seguro
+              - "No"
+              - "Sí"
+              - "No estoy seguro"
           default: 0
       validations:
           required: true
